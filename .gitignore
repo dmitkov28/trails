@@ -1,3 +1,5 @@
 .idea
 __pycache__
 dbip-city-lite-2023-12.mmdb
+.python-version
+venv/
