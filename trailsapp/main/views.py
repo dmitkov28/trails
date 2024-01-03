@@ -1,19 +1,19 @@
-import random
-
-from django.contrib.gis.geoip2 import GeoIP2
+import folium
 from django.http import HttpRequest
 from django.shortcuts import render
 
 
 # Create your views here.
 def my_first_view(request: HttpRequest):
-    g = GeoIP2()
-    country = g.city("google.com")
+    m = folium.Map(location=(42.6654086, 23.2597745), zoom_start=20, tiles="cartodb positron")
+    folium.Marker(
+        location=[42.6654086, 23.2597745],
+        tooltip="Zenobia Baby",
+        popup="Zenobia Baby",
+        icon=folium.Icon(icon="heart"),
+    ).add_to(m)
 
     context = {
-        "random_number": random.randint(0, 1024),
-        "test": country
-        # "meta_data": request.META["REMOTE_ADDR"]
-
+        "map": m._repr_html_()
     }
     return render(request=request, template_name='index.html', context=context)
