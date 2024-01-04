@@ -24,11 +24,19 @@ def home_view(request: HttpRequest):
         icon=folium.Icon(icon="heart"),
     ).add_to(m)
 
+    # folium.Marker(
+    #     location=[42.656817785193056, 23.34933134976066],
+    #     tooltip="Дани локация",
+    #     popup="Тука живее Данката",
+    #     icon=folium.Icon(icon="leaf", color="red", icon_color="white", prefix="fa"),
+    # ).add_to(m)
+
     folium.Marker(
-        location=[42.6531609, 23.365499],
+
+        location=[42.65463735755751, 23.370681409879392],
         tooltip="KFC",
         popup="MMMMMMMMMMMMMMMMMMMMMMMM KFC",
-        icon=folium.Icon(icon="drumstick-bite", color="red", icon_color="white", prefix="fa", angle=45),
+        icon=folium.Icon(icon="drumstick-bite", color="red", icon_color="white", prefix="fa"),
     ).add_to(m)
 
     context = {
