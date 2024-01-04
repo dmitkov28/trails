@@ -117,4 +117,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GEOIP_PATH = BASE_DIR / 'dbip-city-lite-2023-12.mmdb'
